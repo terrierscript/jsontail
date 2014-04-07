@@ -1,6 +1,6 @@
 Tail = require('tail').Tail;
-
-tail = new Tail("./sample");
+var filename = process.ARGV[2];
+tail = new Tail(filename);
 
 tail.on("line", function(data) {
   try{
