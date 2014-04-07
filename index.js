@@ -1,5 +1,6 @@
 Tail = require('tail').Tail;
-var filename = process.ARGV[2];
+var path = require("path")
+var filename = path.resolve(process.argv[2]);
 tail = new Tail(filename);
 
 tail.on("line", function(data) {
